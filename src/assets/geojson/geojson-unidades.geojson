@@ -1,0 +1,250 @@
+{
+  "type": "FeatureCollection",
+  "name": "Unidades Centro Aberto",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "Unidades Centro Aberto"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "idSubprefeitura": 13,
+        "implantado": true,
+        "capa": "implantados_960x406_Largo_São_Franscisco.jpg",
+        "nome": "Largo São Francisco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.636723, -23.549611]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "idSubprefeitura": 13,
+        "implantado": true,
+        "capa": "implantados_960x406_Largo_São_Bento.jpg",
+        "nome": "Largo São Bento"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6362269, -23.5439553]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "idSubprefeitura": 13,
+        "implantado": true,
+        "capa": "implantados_960x406_Largo_General_Osório.jpg",
+        "nome": "Largo General Osório"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6406633, -23.5352562]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "idSubprefeitura": 13,
+        "implantado": true,
+        "capa": "implantados_960x406_Largo_Paissandu.jpg",
+        "nome": "Largo do Paissandú"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6405847, -23.5427217]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "idSubprefeitura": 13,
+        "implantado": true,
+        "capa": "implantados_960x406_Rua_Galvão_Bueno.jpg",
+        "nome": "Rua Galvão Bueno"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6371392, -23.5596132]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "idSubprefeitura": 13,
+        "implantado": true,
+        "capa": "implantados_960x406_Marechal_Deodoro.jpg",
+        "nome": "Praça Marechal Deodoro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6570039, -23.534573]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "idSubprefeitura": 13,
+        "implantado": true,
+        "capa": "implantados_960x406_Praça_Min_Costa_Manso.jpg",
+        "nome": "Praça Ministro Costa Manso"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6310781, -23.5534999]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "idSubprefeitura": 13,
+        "implantado": false,
+        "capa": "em_andamento_960x406_Terminal_Amaral_Gurgel.jpg",
+        "nome": "Estacionamento Amaral Gurgel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6475664, -23.5435981]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "idSubprefeitura": 2,
+        "implantado": true,
+        "capa": "implantados_960x406_Largo_Cine_Clipper.jpg",
+        "nome": "Largo Cine Clipper"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.7032869, -23.5021389]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "idSubprefeitura": 14,
+        "implantado": true,
+        "capa": "implantados_960x406_Praça_Pedro_Bento.jpg",
+        "nome": "Praça Padre Bento"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6206732, -23.5325467]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "idSubprefeitura": 10,
+        "implantado": true,
+        "capa": "implantados_960x406_Rua_Gregório_R._Itaquera.jpg",
+        "nome": "Rua Gregório Ramalho"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.4572292, -23.5374131]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "idSubprefeitura": 28,
+        "implantado": false,
+        "capa": "implantados_960x406_Praça_Maria_Bechara.jpg",
+        "nome": "Praça Maria Bechara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.7068832, -23.654284]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "idSubprefeitura": 12,
+        "implantado": false,
+        "capa": "em_andamento_960x406_Praça_Maria_Prof_José_Antunes.jpg",
+        "nome": "Praça Prof. José Azevedo Antunes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.7081686, -23.5244644]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "idSubprefeitura": 4,
+        "implantado": false,
+        "capa": "em_andamento_960x406_Av_Dr_Antonio_Marie_Laet.jpg",
+        "nome": "Av.Dr.Antonio Marie Laet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6016295, -23.4743977]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15,
+        "idSubprefeitura": 23,
+        "implantado": false,
+        "capa": "em_andamento_960x406_Praça_Manoel_Lopes.jpg",
+        "nome": "Praça Manoel Lopes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.7724598, -23.6843651]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 16,
+        "idSubprefeitura": 8,
+        "implantado": false,
+        "capa": "em_andamento_960x406_Praça_Miguel_Rachid.jpg",
+        "nome": "Praça Miguel Rachid"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.4723579, -23.4945811]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 17,
+        "idSubprefeitura": 7,
+        "implantado": true,
+        "capa": "implantados_960x406_Praça_Oito_Setembro.jpg",
+        "nome": "Praça Oito de Setembro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-23.5243819,-46.5509184]
+      }
+    }
+  ]
+}

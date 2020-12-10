@@ -1,0 +1,19 @@
+@import "./scss/variables";
+@import "./scss/mapa";
+
+.app {
+	max-width: 960px;
+	margin: auto;
+	#mapa {
+		opacity: 1;
+		transition: 1s ease-in opacity;
+		position: relative;
+	}
+}
+
+
+@media (max-width: 960px) {
+	.app {
+		margin: 0 3%;
+	}
+}
