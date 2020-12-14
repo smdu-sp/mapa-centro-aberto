@@ -1,19 +1,40 @@
 import './styles.scss'
-import Preloader from './components/Preloader.vue'
-const Mapa = () => import('./components/Mapa.vue')
+const Preloader = () => import('./components/Preloader.vue')
+const SectionMain = () => import('./components/SectionMain.vue')
+const CentroAberto = () => import('./components/CentroAberto.vue')
 
 new Vue({
 	el: '#app',
 	components: {
 		Preloader,
-		Mapa
+		SectionMain,
+		CentroAberto
 	},
 	data: {
-		loaded: false
+		loaded: true,
+		idcentro: 10
+	},
+	computed: {
+		showCentro () {
+			return !!this.idcentro
+		}
+	},
+	mounted () {
+		this.changeLoaded()
 	},
 	methods: {
-		isLoaded () {
-			this.loaded = true
+		getIdCentro (idcentro) {
+			this.idcentro = idcentro
+		},
+		changeLoaded () {
+			this.loaded = !this.loaded
+		},
+		reset () {
+			this.changeLoaded()
+			this.idcentro = 0
+			setTimeout(() => {
+				this.changeLoaded()
+			}, 300);
 		}
 	}
 })

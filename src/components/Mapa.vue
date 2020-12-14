@@ -1,9 +1,5 @@
 <template>
 	<div id="mapa" class="mapa">
-		<div class="title">
-			<h3>Centro Aberto</h3>
-		</div>
-
 		<vl-map
 			ref="map"
 			v-if="!loading"
@@ -20,7 +16,12 @@
 			/>
 			
       <vl-layer-vector>
-				<vl-feature :key="index" v-for="(feature, index) in features" :properties="feature.properties">
+				<vl-feature
+					:key="`key-layer-${feature.properties.id}`"
+					:ref="`layer-${feature.properties.id}`"
+					v-for="feature in features"
+					:properties="feature.properties"
+				>
 					<vl-geom-polygon :coordinates="feature.geometry.coordinates" />
 					<vl-style-box>
 						<vl-style-text
@@ -35,13 +36,22 @@
       </vl-layer-vector>
 
 			<vl-layer-vector>
-				<vl-feature :key="index" v-for="(point, index) in points.features" :properties="point.properties">
+				<vl-feature
+					:key="`point-${point.properties.id}`"
+					v-for="point in points.features"
+					:properties="point.properties"
+				>
 					<vl-geom-point :coordinates="point.geometry.coordinates" />
 					<vl-style-box>
-						<vl-style-circle>
+						<vl-style-icon
+							:src="point.properties.implantado ? src.pinImplantado : src.pinAndamento" 
+							:scale=".2"
+							:anchor="[0.5, 1]"
+						/>
+						<!-- vl-style-circle>
 							<vl-style-fill :color="point.properties.implantado ? '#5a67d7' : '#62b2ed'"></vl-style-fill>
 							<vl-style-stroke color="#ffffff"></vl-style-stroke>
-						</vl-style-circle>
+						</vl-style-circle -->
 					</vl-style-box>
 				</vl-feature>
 
@@ -55,18 +65,20 @@
               :position="feature.geometry.coordinates"
               :auto-pan="true"
               :auto-pan-animation="{ duration: 300 }"
-              class=""
             >
 							<template>
 								<section class="mapa__card">
-                  <header class="mapa__card-header">
-                    <a
+                  <header
+										class="mapa__card-header"
+										:style="`background-image: url(${require(`../assets/capas/${feature.properties.capa}`)})`"
+									>
+                    <!-- a
 											@click="selectedFeatures = selectedFeatures.filter(f => f.properties.id !== feature.properties.id)"
 											class="mapa__card-header-icon"
 											title="Fechar"
 										>
                       <div>Fechar</div>
-                    </a>
+                    </a -->
                   </header>
                   <div class="mapa__card-content">
 										<ul>
@@ -77,7 +89,9 @@
 												{{ selectedFeatures[0].properties.implantado ? 'Implantado' : 'Em andamento' }}
 											</li>
 											<li>
-												<a href="#">Saiba mais</a>
+												<a href="#" @click.prevent="setIdCentro">
+													Saiba mais
+												</a>
 											</li>
 										</ul>
                   </div>
@@ -153,6 +167,9 @@
 <script>
 import subprefeituras from '../assets/geojson/geojson-subprefeituras.geojson'
 import unidades from '../assets/geojson/geojson-unidades.geojson'
+import pinAndamento from '../assets/icons/pin-em-andamento.svg'
+import pinImplantado from '../assets/icons/pin-implantado.svg'
+
 export default {
 	name:'mapa',
 	data () {
@@ -163,6 +180,11 @@ export default {
 			rotation: 0,
 			features: [],
 			selectedFeatures: [],
+			src: {
+				pinAndamento: '',
+				pinImplantado: '',
+				capaSelected: ''
+			},
 			showChatList: false
     }
 	},
@@ -170,6 +192,8 @@ export default {
 		this.features = JSON.parse(subprefeituras)
 		this.features = this.features.features
 		this.points = JSON.parse(unidades)
+		this.src.pinAndamento = pinAndamento
+		this.src.pinImplantado = pinImplantado
 	},
 	computed: {
 		implantados () {
@@ -180,18 +204,12 @@ export default {
 		}
 	},
 	methods: {
-		onSourceCreated (sourceVm) {
-      const map = this.$refs.map
-      setTimeout(() => {
-        map.$view.fit(sourceVm.$source.getExtent(), {
-          size: map.$map.getSize(),
-          duration: 1000
-        })
-      }, 500)
-		},
 		expandChatList () {
       this.showChatList = !this.showChatList;      
-    }
+		},
+		setIdCentro () {
+			this.$emit('idcentro', this.selectedFeatures[0].properties.id)
+		}
 	}
 }
 </script>

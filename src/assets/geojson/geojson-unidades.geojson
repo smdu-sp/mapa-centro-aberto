@@ -12,7 +12,7 @@
       "type": "Feature",
       "properties": {
         "id": 1,
-        "idSubprefeitura": 13,
+        "idSubprefeitura": 14,
         "implantado": true,
         "capa": "implantados_960x406_Largo_São_Franscisco.jpg",
         "nome": "Largo São Francisco"
@@ -26,7 +26,7 @@
       "type": "Feature",
       "properties": {
         "id": 2,
-        "idSubprefeitura": 13,
+        "idSubprefeitura": 14,
         "implantado": true,
         "capa": "implantados_960x406_Largo_São_Bento.jpg",
         "nome": "Largo São Bento"
@@ -40,7 +40,7 @@
       "type": "Feature",
       "properties": {
         "id": 3,
-        "idSubprefeitura": 13,
+        "idSubprefeitura": 14,
         "implantado": true,
         "capa": "implantados_960x406_Largo_General_Osório.jpg",
         "nome": "Largo General Osório"
@@ -54,7 +54,7 @@
       "type": "Feature",
       "properties": {
         "id": 4,
-        "idSubprefeitura": 13,
+        "idSubprefeitura": 14,
         "implantado": true,
         "capa": "implantados_960x406_Largo_Paissandu.jpg",
         "nome": "Largo do Paissandú"
@@ -68,7 +68,7 @@
       "type": "Feature",
       "properties": {
         "id": 5,
-        "idSubprefeitura": 13,
+        "idSubprefeitura": 14,
         "implantado": true,
         "capa": "implantados_960x406_Rua_Galvão_Bueno.jpg",
         "nome": "Rua Galvão Bueno"
@@ -82,7 +82,7 @@
       "type": "Feature",
       "properties": {
         "id": 6,
-        "idSubprefeitura": 13,
+        "idSubprefeitura": 14,
         "implantado": true,
         "capa": "implantados_960x406_Marechal_Deodoro.jpg",
         "nome": "Praça Marechal Deodoro"
@@ -96,7 +96,7 @@
       "type": "Feature",
       "properties": {
         "id": 7,
-        "idSubprefeitura": 13,
+        "idSubprefeitura": 14,
         "implantado": true,
         "capa": "implantados_960x406_Praça_Min_Costa_Manso.jpg",
         "nome": "Praça Ministro Costa Manso"
@@ -110,7 +110,7 @@
       "type": "Feature",
       "properties": {
         "id": 8,
-        "idSubprefeitura": 13,
+        "idSubprefeitura": 14,
         "implantado": false,
         "capa": "em_andamento_960x406_Terminal_Amaral_Gurgel.jpg",
         "nome": "Estacionamento Amaral Gurgel"
@@ -138,7 +138,7 @@
       "type": "Feature",
       "properties": {
         "id": 10,
-        "idSubprefeitura": 14,
+        "idSubprefeitura": 15,
         "implantado": true,
         "capa": "implantados_960x406_Praça_Pedro_Bento.jpg",
         "nome": "Praça Padre Bento"
@@ -152,7 +152,7 @@
       "type": "Feature",
       "properties": {
         "id": 11,
-        "idSubprefeitura": 10,
+        "idSubprefeitura": 11,
         "implantado": true,
         "capa": "implantados_960x406_Rua_Gregório_R._Itaquera.jpg",
         "nome": "Rua Gregório Ramalho"
@@ -166,7 +166,7 @@
       "type": "Feature",
       "properties": {
         "id": 12,
-        "idSubprefeitura": 28,
+        "idSubprefeitura": 29,
         "implantado": false,
         "capa": "implantados_960x406_Praça_Maria_Bechara.jpg",
         "nome": "Praça Maria Bechara"
@@ -180,7 +180,7 @@
       "type": "Feature",
       "properties": {
         "id": 13,
-        "idSubprefeitura": 12,
+        "idSubprefeitura": 13,
         "implantado": false,
         "capa": "em_andamento_960x406_Praça_Maria_Prof_José_Antunes.jpg",
         "nome": "Praça Prof. José Azevedo Antunes"
@@ -208,7 +208,7 @@
       "type": "Feature",
       "properties": {
         "id": 15,
-        "idSubprefeitura": 23,
+        "idSubprefeitura": 24,
         "implantado": false,
         "capa": "em_andamento_960x406_Praça_Manoel_Lopes.jpg",
         "nome": "Praça Manoel Lopes"

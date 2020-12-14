@@ -33,10 +33,11 @@ module.exports = ({ mode, publicPath }) => {
 					],
 				},
 				{
-				 test: /\.(png|svg|jpg|gif|kml|rar)$/,
+				 test: /\.(png|svg|jpg)$/i,
 				 loader: 'file-loader',
 					options: {
-						name: './[name].[ext]',
+						name: '[name].[ext]',
+						esModule: false // <- here
 					}
 				},
 				{
@@ -70,7 +71,7 @@ module.exports = ({ mode, publicPath }) => {
 				{
 					test: /\.geojson$/i,
 					use: 'raw-loader',
-				},
+				}
 			]
 		}
 	}
