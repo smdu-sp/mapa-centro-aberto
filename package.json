@@ -8,7 +8,7 @@
 		"build:gu:homolog": "webpack -p --config ./webpack.config --env.mode=production --env.publicPath=http://comunicacao.smul.pmsp/wp-content/themes/gestaourbana-1.4/SPA/centro-aberto/",
 		"build:gu:local": "webpack -p --config ./webpack.config --env.mode=production --env.publicPath=http://localhost/gesteaourbanasp/wp-content/themes/gestaourbana-1.4/SPA/centro-aberto/",
 		"build": "webpack -p --config ./webpack.config --env.mode=homolog --env.publicPath=/",
-		"dev": "webpack-dev-server --host 192.168.0.102 --open -p --config ./webpack.config --env.mode=development --env.publicPath=/"
+		"dev": "webpack-dev-server --open -p --config ./webpack.config --env.mode=development --env.publicPath=/"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.9.0",

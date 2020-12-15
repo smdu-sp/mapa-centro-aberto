@@ -45,63 +45,44 @@
 					<vl-style-box>
 						<vl-style-icon
 							:src="point.properties.implantado ? src.pinImplantado : src.pinAndamento" 
-							:scale=".2"
+							:scale=".4"
 							:anchor="[0.5, 1]"
 						/>
-						<!-- vl-style-circle>
-							<vl-style-fill :color="point.properties.implantado ? '#5a67d7' : '#62b2ed'"></vl-style-fill>
-							<vl-style-stroke color="#ffffff"></vl-style-stroke>
-						</vl-style-circle -->
 					</vl-style-box>
 				</vl-feature>
-
-				<!-- interactions -->
-        <vl-interaction-select :features.sync="selectedFeatures">
-          <template slot-scope="select">
-            <vl-overlay
-              v-for="feature in select.features"
-              :key="feature.properties.id"
-              :id="feature.properties.id"
-              :position="feature.geometry.coordinates"
-              :auto-pan="true"
-              :auto-pan-animation="{ duration: 300 }"
-            >
-							<template>
-								<section class="mapa__card">
-                  <header
-										class="mapa__card-header"
-										:style="`background-image: url(${require(`../assets/capas/${feature.properties.capa}`)})`"
-									>
-                    <!-- a
-											@click="selectedFeatures = selectedFeatures.filter(f => f.properties.id !== feature.properties.id)"
-											class="mapa__card-header-icon"
-											title="Fechar"
-										>
-                      <div>Fechar</div>
-                    </a -->
-                  </header>
-                  <div class="mapa__card-content">
-										<ul>
-											<li class="lista-nome">
-												{{ selectedFeatures[0].properties.nome }}
-											</li>
-											<li>
-												{{ selectedFeatures[0].properties.implantado ? 'Implantado' : 'Em andamento' }}
-											</li>
-											<li>
-												<a href="#" @click.prevent="setIdCentro">
-													Saiba mais
-												</a>
-											</li>
-										</ul>
-                  </div>
-								</section>
-							</template>
-            </vl-overlay>
-          </template>
-        </vl-interaction-select>
 			</vl-layer-vector>
 
+			<vl-interaction-select :features.sync="selectedFeatures"></vl-interaction-select>
+			<vl-overlay
+			 	v-for="feature in selectedFeatures"
+				:key="feature.properties.id"
+        :id="feature.properties.id"
+        :position="feature.geometry.coordinates"
+				:auto-pan="true"
+        :auto-pan-animation="{ duration: 300 }"
+      >
+				<template>
+					<section class="mapa__card">
+            <header
+							class="mapa__card-header"
+							:style="`background-image: url(${require(`../assets/capas/${feature.properties.capa}`)})`"
+						></header>
+            <div class="mapa__card-content">
+							<ul>
+								<li class="lista-nome">
+									{{ feature.properties.nome }}
+								</li>
+								<li>
+									{{ feature.properties.implantado ? 'Implantado' : 'Em andamento' }}
+								</li>
+								<li>
+									<span>Saiba mais</span>
+								</li>
+							</ul>
+            </div>
+					</section>
+				</template>
+			</vl-overlay>
     </vl-map>
 		<div class="list">
 			<div class="card">
@@ -147,7 +128,7 @@
 					</div>
 					<ul>
 						<li :key="item.properties.id" v-for="item in emAndamentos">
-							<a href="#">{{ item.properties.nome }}</a>
+							<span @click="setSelected(item.properties.id)">{{ item.properties.nome }}</span>
 						</li>
 					</ul>
 
@@ -156,7 +137,7 @@
 					</div>
 					<ul>
 						<li :key="item.properties.id" v-for="item in implantados">
-							<a href="#">{{ item.properties.nome }}</a>
+							<span @click="setSelected(item.properties.id)">{{ item.properties.nome }}</span>
 						</li>
 					</ul>
 				</div>
@@ -180,6 +161,7 @@ export default {
 			rotation: 0,
 			features: [],
 			selectedFeatures: [],
+			points: [],
 			src: {
 				pinAndamento: '',
 				pinImplantado: '',
@@ -203,12 +185,23 @@ export default {
 			return this.points.features.filter(p => p.properties.implantado !== true)
 		}
 	},
+	watch: {
+		selectedFeatures () {
+			this.showChatList = false
+		}
+	},
 	methods: {
 		expandChatList () {
       this.showChatList = !this.showChatList;      
 		},
 		setIdCentro () {
 			this.$emit('idcentro', this.selectedFeatures[0].properties.id)
+		},
+		setSelected (id) {
+			this.selectedFeatures = this.points.features.filter(f => f.properties.id === id)
+		},
+		onMapClick() {
+			console.log('aqui')
 		}
 	}
 }

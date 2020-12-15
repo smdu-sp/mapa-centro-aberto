@@ -8,35 +8,38 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://unpkg.com/vuelayers/lib/style.css">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 	
 	<!-- include Vue.js -->
 	<script src="https://unpkg.com/vue/dist/vue.js" defer></script>
 
 	<!-- include OpenLayers -->
 	<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js" defer></script>
-	
-	<!-- include Swiper.js -->
-	<script src="https://unpkg.com/swiper/swiper-bundle.js" defer></script>
 
 	<!-- include UMD Vuelayers Build-->
 	<script src="https://unpkg.com/vuelayers/lib/index.umd.js" defer></script>
+	
+	<!-- include Swiper.js 
+		<script src="https://unpkg.com/swiper/swiper-bundle.js" defer></script>	
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	-->
+
 </head>
 <body>
 	<div id="app" class="app">
 		<preloader
 			v-if="loaded"
 		></preloader>
-		<section-main
+		<mapa></mapa>
+		<!--section-main
 			v-if="!showCentro && !loaded"
 			@idcentro="getIdCentro"
-		></section-main>
-		<centro-aberto
+		></section-main -->
+		<!-- centro-aberto
 			v-if="showCentro && !loaded"
 			:idcentro="idcentro"
 			@loaded="changeLoaded"
 			@reset="reset"
-		></centro-aberto>
+		></centro-aberto -->
 	</div>
 </body>
 </html>

@@ -1,18 +1,16 @@
 import './styles.scss'
 const Preloader = () => import('./components/Preloader.vue')
-const SectionMain = () => import('./components/SectionMain.vue')
-const CentroAberto = () => import('./components/CentroAberto.vue')
+const Mapa = () => import('./components/Mapa.vue')
 
 new Vue({
 	el: '#app',
 	components: {
 		Preloader,
-		SectionMain,
-		CentroAberto
+		Mapa
 	},
 	data: {
 		loaded: true,
-		idcentro: 10
+		idcentro: 0
 	},
 	computed: {
 		showCentro () {

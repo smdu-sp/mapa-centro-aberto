@@ -78,7 +78,7 @@ module.exports = ({ mode, publicPath }) => {
 
 	if (mode === 'development' || mode === 'homolog') {
 		config.plugins.push(new HtmlWebpackPlugin({
-				title: 'PIU Monitoramento',
+				title: 'Centro Aberto',
 				scriptLoading: 'defer',
 				template:'index.html'
 			})
