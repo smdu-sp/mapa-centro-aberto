@@ -30,7 +30,13 @@
         margin: 0;
         padding: 0;
         li {
+          display: flex;
+          align-items: center;
           color: #5c6473;
+
+          a, span {
+            margin-left: 10px;
+          }
         }
         .lista-nome {
           font-weight: bold;

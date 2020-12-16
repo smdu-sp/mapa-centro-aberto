@@ -14,6 +14,7 @@
         "id": 1,
         "idSubprefeitura": 14,
         "implantado": true,
+        "url": "#",
         "capa": "implantados_960x406_Largo_São_Franscisco.jpg",
         "nome": "Largo São Francisco"
       },
@@ -28,6 +29,7 @@
         "id": 2,
         "idSubprefeitura": 14,
         "implantado": true,
+        "url": "#",
         "capa": "implantados_960x406_Largo_São_Bento.jpg",
         "nome": "Largo São Bento"
       },
@@ -42,6 +44,7 @@
         "id": 3,
         "idSubprefeitura": 14,
         "implantado": true,
+        "url": "#",
         "capa": "implantados_960x406_Largo_General_Osório.jpg",
         "nome": "Largo General Osório"
       },
@@ -56,6 +59,7 @@
         "id": 4,
         "idSubprefeitura": 14,
         "implantado": true,
+        "url": "#",
         "capa": "implantados_960x406_Largo_Paissandu.jpg",
         "nome": "Largo do Paissandú"
       },
@@ -70,6 +74,7 @@
         "id": 5,
         "idSubprefeitura": 14,
         "implantado": true,
+        "url": "#",
         "capa": "implantados_960x406_Rua_Galvão_Bueno.jpg",
         "nome": "Rua Galvão Bueno"
       },
@@ -84,6 +89,7 @@
         "id": 6,
         "idSubprefeitura": 14,
         "implantado": true,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/marechal-deodoro",
         "capa": "implantados_960x406_Marechal_Deodoro.jpg",
         "nome": "Praça Marechal Deodoro"
       },
@@ -98,6 +104,7 @@
         "id": 7,
         "idSubprefeitura": 14,
         "implantado": true,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-ministro-costa-manso",
         "capa": "implantados_960x406_Praça_Min_Costa_Manso.jpg",
         "nome": "Praça Ministro Costa Manso"
       },
@@ -112,6 +119,7 @@
         "id": 8,
         "idSubprefeitura": 14,
         "implantado": false,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/terminal-amaral-gurgel",
         "capa": "em_andamento_960x406_Terminal_Amaral_Gurgel.jpg",
         "nome": "Estacionamento Amaral Gurgel"
       },
@@ -126,6 +134,7 @@
         "id": 9,
         "idSubprefeitura": 2,
         "implantado": true,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/largo-do-clipper",
         "capa": "implantados_960x406_Largo_Cine_Clipper.jpg",
         "nome": "Largo Cine Clipper"
       },
@@ -139,7 +148,8 @@
       "properties": {
         "id": 10,
         "idSubprefeitura": 15,
-        "implantado": true,
+        "implantado": true,        
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-padre-bento",
         "capa": "implantados_960x406_Praça_Pedro_Bento.jpg",
         "nome": "Praça Padre Bento"
       },
@@ -154,6 +164,7 @@
         "id": 11,
         "idSubprefeitura": 11,
         "implantado": true,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/rua-gregorio-ramalho",
         "capa": "implantados_960x406_Rua_Gregório_R._Itaquera.jpg",
         "nome": "Rua Gregório Ramalho"
       },
@@ -168,6 +179,7 @@
         "id": 12,
         "idSubprefeitura": 29,
         "implantado": false,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-maria-bechara/",
         "capa": "implantados_960x406_Praça_Maria_Bechara.jpg",
         "nome": "Praça Maria Bechara"
       },
@@ -182,6 +194,7 @@
         "id": 13,
         "idSubprefeitura": 13,
         "implantado": false,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-prof-jose-azevedo-antunes",
         "capa": "em_andamento_960x406_Praça_Maria_Prof_José_Antunes.jpg",
         "nome": "Praça Prof. José Azevedo Antunes"
       },
@@ -196,6 +209,7 @@
         "id": 14,
         "idSubprefeitura": 4,
         "implantado": false,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/av-dr-antonio-maria-laet/",
         "capa": "em_andamento_960x406_Av_Dr_Antonio_Marie_Laet.jpg",
         "nome": "Av.Dr.Antonio Marie Laet"
       },
@@ -210,6 +224,7 @@
         "id": 15,
         "idSubprefeitura": 24,
         "implantado": false,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-manoel-lopes-em-implantacacao/",
         "capa": "em_andamento_960x406_Praça_Manoel_Lopes.jpg",
         "nome": "Praça Manoel Lopes"
       },
@@ -224,6 +239,7 @@
         "id": 16,
         "idSubprefeitura": 8,
         "implantado": false,
+        "url": "#",
         "capa": "em_andamento_960x406_Praça_Miguel_Rachid.jpg",
         "nome": "Praça Miguel Rachid"
       },
@@ -238,6 +254,7 @@
         "id": 17,
         "idSubprefeitura": 7,
         "implantado": true,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-oito-de-setembro",
         "capa": "implantados_960x406_Praça_Oito_Setembro.jpg",
         "nome": "Praça Oito de Setembro"
       },
