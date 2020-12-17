@@ -9,7 +9,6 @@
 			data-projection="EPSG:4326"
 			style="height: 600px; background-color: #6f8094;"
 			@pointermove="onMapPointerMove"
-			@mounted="viewMounted"
 		>
       <vl-view
         :zoom.sync="zoom"
@@ -66,8 +65,17 @@
 						<section class="mapa__card">
 							<header
 								class="mapa__card-header"
-								:style="`background-image: url(${require(`../assets/capas/${selectedFeatures[0].properties.capa}`)})`"
-							></header>
+								:style="`background-image: url('${selectedFeatures[0].properties.capa}')`"
+							>
+								<button
+									:style="{
+										'background-color': selectedFeatures[0].properties.implantado ? '#5a67d7' : '#62b2ed'
+									}"
+									@click.prevent="selectedFeatures = []"
+								>
+									Fechar
+								</button>
+							</header>
 							<div class="mapa__card-content">
 								<ul>
 									<li class="lista-nome">
@@ -232,11 +240,11 @@ export default {
 			return this.points.features.filter(p => p.properties.implantado !== true)
 		}
 	},
-	watch: {
+	/* watch: {
 		selectedFeatures () {
 			this.showChatList = false
 		}
-	},
+	}, */
 	methods: {
 		onMapPointerMove ({ pixel }) {
 			let hitFeature = this.$refs.map.forEachFeatureAtPixel(pixel, feature => feature)
@@ -251,9 +259,6 @@ export default {
 				console.log(err.message)
 			}
 		},
-		viewMounted () {
-    	console.log(this.$refs.view.$view)
-    },
 		expandChatList () {
       this.showChatList = !this.showChatList;      
 		},

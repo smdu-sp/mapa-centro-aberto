@@ -16,7 +16,7 @@
         "implantado": true,
         "isPoint": true,
         "url": "#",
-        "capa": "implantados_960x406_Largo_São_Franscisco.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_S%C3%A3o_Franscisco.jpg",
         "nome": "Largo São Francisco"
       },
       "geometry": {
@@ -32,7 +32,7 @@
         "implantado": true,
         "isPoint": true,
         "url": "#",
-        "capa": "implantados_960x406_Largo_São_Bento.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_S%C3%A3o_Bento.jpg",
         "nome": "Largo São Bento"
       },
       "geometry": {
@@ -48,7 +48,7 @@
         "implantado": true,
         "isPoint": true,
         "url": "#",
-        "capa": "implantados_960x406_Largo_General_Osório.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_General_Os%C3%B3rio.jpg",
         "nome": "Largo General Osório"
       },
       "geometry": {
@@ -64,7 +64,7 @@
         "implantado": true,
         "isPoint": true,
         "url": "#",
-        "capa": "implantados_960x406_Largo_Paissandu.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_Paissandu.jpg",
         "nome": "Largo do Paissandú"
       },
       "geometry": {
@@ -80,7 +80,7 @@
         "implantado": true,
         "isPoint": true,
         "url": "#",
-        "capa": "implantados_960x406_Rua_Galvão_Bueno.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Rua_Galv%C3%A3o_Bueno.jpg",
         "nome": "Rua Galvão Bueno"
       },
       "geometry": {
@@ -96,7 +96,7 @@
         "implantado": true,
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/marechal-deodoro",
-        "capa": "implantados_960x406_Marechal_Deodoro.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Marechal_Deodoro.jpg",
         "nome": "Praça Marechal Deodoro"
       },
       "geometry": {
@@ -112,7 +112,7 @@
         "implantado": true,
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-ministro-costa-manso",
-        "capa": "implantados_960x406_Praça_Min_Costa_Manso.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Praça_Min_Costa_Manso-.jpg ",
         "nome": "Praça Ministro Costa Manso"
       },
       "geometry": {
@@ -128,8 +128,8 @@
         "implantado": false,
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/terminal-amaral-gurgel",
-        "capa": "em_andamento_960x406_Terminal_Amaral_Gurgel.jpg",
-        "nome": "Estacionamento Amaral Gurgel"
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Em-Andamento_960x406_Terminal_Amaral_Gurgel-.jpg",
+        "nome": "Terminal Amaral Gurgel"
       },
       "geometry": {
         "type": "Point",
@@ -144,7 +144,7 @@
         "implantado": true,
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/largo-do-clipper",
-        "capa": "implantados_960x406_Largo_Cine_Clipper.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_Cine_Clipper.jpg",
         "nome": "Largo Cine Clipper"
       },
       "geometry": {
@@ -160,7 +160,7 @@
         "implantado": true,
         "isPoint": true,     
         "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-padre-bento",
-        "capa": "implantados_960x406_Praça_Pedro_Bento.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Praça_Padre_Bento.jpg",
         "nome": "Praça Padre Bento"
       },
       "geometry": {
@@ -176,7 +176,7 @@
         "implantado": true,
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/rua-gregorio-ramalho",
-        "capa": "implantados_960x406_Rua_Gregório_R._Itaquera.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Rua_Gregório_R._Itaquera.jpg",
         "nome": "Rua Gregório Ramalho"
       },
       "geometry": {
@@ -192,7 +192,7 @@
         "implantado": false,
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-maria-bechara/",
-        "capa": "implantados_960x406_Praça_Maria_Bechara.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implatados_960x406_Praça_Maria_Bechara.jpg",
         "nome": "Praça Maria Bechara"
       },
       "geometry": {
@@ -208,7 +208,7 @@
         "implantado": false,
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-prof-jose-azevedo-antunes",
-        "capa": "em_andamento_960x406_Praça_Maria_Prof_José_Antunes.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Em-Andamento_960x406_Praça_Maria_Prof_José_Antunes.jpg",
         "nome": "Praça Prof. José Azevedo Antunes"
       },
       "geometry": {
@@ -224,7 +224,7 @@
         "implantado": false,
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/av-dr-antonio-maria-laet/",
-        "capa": "em_andamento_960x406_Av_Dr_Antonio_Marie_Laet.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Em-Andamento_960x406_Av.Dr_.Antonio-Marie-Laet.jpg",
         "nome": "Av.Dr.Antonio Marie Laet"
       },
       "geometry": {
@@ -240,7 +240,7 @@
         "implantado": false,
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-manoel-lopes-em-implantacacao/",
-        "capa": "em_andamento_960x406_Praça_Manoel_Lopes.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Em-Andamento_960x406_Praça_Manoel_Lopes.jpg",
         "nome": "Praça Manoel Lopes"
       },
       "geometry": {
@@ -256,7 +256,7 @@
         "implantado": false,
         "isPoint": true,
         "url": "#",
-        "capa": "em_andamento_960x406_Praça_Miguel_Rachid.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/default-image.png",
         "nome": "Praça Miguel Rachid"
       },
       "geometry": {
@@ -272,7 +272,7 @@
         "implantado": true,
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/praca-oito-de-setembro",
-        "capa": "implantados_960x406_Praça_Oito_Setembro.jpg",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Praça_Oito_Setembro.jpg",
         "nome": "Praça Oito de Setembro"
       },
       "geometry": {
