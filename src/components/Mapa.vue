@@ -5,13 +5,17 @@
 			v-if="!loading"
 			:load-tiles-while-animating="true"
 			:load-tiles-while-interacting="true"
+			:style="{ cursor: mapCursor }"
 			data-projection="EPSG:4326"
 			style="height: 600px; background-color: #6f8094;"
+			@pointermove="onMapPointerMove"
+			@mounted="viewMounted"
 		>
       <vl-view
         :zoom.sync="zoom"
 				:min-zoom="minZoom"
 				:center.sync="center"
+				ref="view"
         ident="view"
 			/>
 			
@@ -53,10 +57,8 @@
 
 				<vl-interaction-select :features.sync="selectedFeatures"></vl-interaction-select>
 				<vl-overlay
-					v-for="feature in selectedFeatures"
-					:key="feature.properties.id"
-					:id="feature.properties.id"
-					:position="feature.geometry.coordinates"
+					v-if="selectedFeatures.length > 0"
+					:position="selectedFeatures[0].geometry.coordinates"
 					:auto-pan="true"
 					:auto-pan-animation="{ duration: 300 }"
 				>
@@ -64,7 +66,7 @@
 						<section class="mapa__card">
 							<header
 								class="mapa__card-header"
-								:style="`background-image: url(${require(`../assets/capas/${feature.properties.capa}`)})`"
+								:style="`background-image: url(${require(`../assets/capas/${selectedFeatures[0].properties.capa}`)})`"
 							></header>
 							<div class="mapa__card-content">
 								<ul>
@@ -84,7 +86,7 @@
 												d="M0 7.26501C0 3.39502 3.13 0.265015 7 0.265015C10.87 0.265015 14 3.39502 14 7.26501C14 11.435 9.58002 17.185 7.77002 19.375C7.37 19.855 6.64001 19.855 6.23999 19.375C4.41998 17.185 0 11.435 0 7.26501ZM4.5 7.26501C4.5 8.64502 5.62 9.76501 7 9.76501C8.38 9.76501 9.5 8.64502 9.5 7.26501C9.5 5.88501 8.38 4.76501 7 4.76501C5.62 4.76501 4.5 5.88501 4.5 7.26501Z"
 											/>
 										</svg>
-										<span>{{ feature.properties.nome }}</span>
+										<span>{{ selectedFeatures[0].properties.nome }}</span>
 									</li>
 									<li>
 										<svg
@@ -103,7 +105,7 @@
 											/>
 										</svg>
 
-										<span>{{ feature.properties.implantado ? 'Implantado' : 'Em andamento' }}</span>
+										<span>{{ selectedFeatures[0].properties.implantado ? 'Implantado' : 'Em andamento' }}</span>
 									</li>
 									<li>
 										<svg
@@ -119,7 +121,7 @@
 												d="M533.333 533.333H66.6667V66.6667H300V0H66.6667C29.6667 0 0 30 0 66.6667V533.333C0 570 29.6667 600 66.6667 600H533.333C570 600 600 570 600 533.333V300H533.333V533.333ZM366.667 0V66.6667H486.333L158.667 394.333L205.667 441.333L533.333 113.667V233.333H600V0H366.667Z"
 											/>
 										</svg>
-										<a :href="feature.properties.url">Saiba mais</a>
+										<a :href="selectedFeatures[0].properties.url">Saiba mais</a>
 									</li>
 								</ul>
 							</div>
@@ -201,11 +203,12 @@ export default {
     return {
       zoom: 11,
 			minZoom: 11.4,
-      center: [-46.5614286546911, -23.58172651568904],
-			rotation: 0,
+			center: [-46.5614286546911, -23.58172651568904],
 			features: [],
 			selectedFeatures: [],
 			points: [],
+			extent: [30,30,30,30],
+      mapCursor: 'default',
 			src: {
 				pinAndamento: '',
 				pinImplantado: '',
@@ -235,6 +238,22 @@ export default {
 		}
 	},
 	methods: {
+		onMapPointerMove ({ pixel }) {
+			let hitFeature = this.$refs.map.forEachFeatureAtPixel(pixel, feature => feature)
+			try {
+				if (hitFeature.get('isPoint')) {
+					this.mapCursor = 'pointer'
+					this.setSelected(hitFeature.get('id'))
+				} else {
+					this.mapCursor = 'default'
+				}
+			} catch (err) {
+				console.log(err.message)
+			}
+		},
+		viewMounted () {
+    	console.log(this.$refs.view.$view)
+    },
 		expandChatList () {
       this.showChatList = !this.showChatList;      
 		},
@@ -243,9 +262,6 @@ export default {
 		},
 		setSelected (id) {
 			this.selectedFeatures = this.points.features.filter(f => f.properties.id === id)
-		},
-		onMapClick() {
-			console.log('aqui')
 		}
 	}
 }
