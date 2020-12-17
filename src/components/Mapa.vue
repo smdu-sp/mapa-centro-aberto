@@ -30,6 +30,7 @@
 						<vl-style-text
 							:text="feature.properties.sp_nome"
 							:scale="1"
+							font="2000px"
 							textAlign="center"
 						/>
 						<vl-style-stroke :width="1" color="#319FD3" />
@@ -209,8 +210,8 @@ export default {
 	name:'mapa',
 	data () {
     return {
-      zoom: 11,
-			minZoom: 11.4,
+      zoom: 11.5,
+			minZoom: 11.5,
 			center: [-46.5614286546911, -23.58172651568904],
 			features: [],
 			selectedFeatures: [],
