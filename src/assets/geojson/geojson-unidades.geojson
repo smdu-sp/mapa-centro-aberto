@@ -255,8 +255,8 @@
         "idSubprefeitura": 8,
         "implantado": false,
         "isPoint": true,
-        "url": "#",
-        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/default-image.png",
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/rua-miguel-rachid/",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Em-Andamento_960x406_Rua_Miguel_Rachid-.jpg",
         "nome": "Praça Miguel Rachid"
       },
       "geometry": {
