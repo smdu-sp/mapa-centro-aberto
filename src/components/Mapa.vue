@@ -73,9 +73,7 @@
 										'background-color': selectedFeatures[0].properties.implantado ? '#5a67d7' : '#62b2ed'
 									}"
 									@click.prevent="selectedFeatures = []"
-								>
-									Fechar
-								</button>
+								>Fechar</button>
 							</header>
 							<div class="mapa__card-content">
 								<ul>
@@ -178,18 +176,14 @@
 					:style="showChatList ? 'display: block;': 'display: none;' "
 				>
 
-					<div class="endpoint andamento">
-						Em andamento
-					</div>
+					<div class="endpoint andamento">Em andamento</div>
 					<ul>
 						<li :key="item.properties.id" v-for="item in emAndamentos">
 							<span @click="setSelected(item.properties.id)">{{ item.properties.nome }}</span>
 						</li>
 					</ul>
 
-					<div class="endpoint implantados">
-						Implantados
-					</div>
+					<div class="endpoint implantados">Implantados</div>
 					<ul>
 						<li :key="item.properties.id" v-for="item in implantados">
 							<span @click="setSelected(item.properties.id)">{{ item.properties.nome }}</span>
