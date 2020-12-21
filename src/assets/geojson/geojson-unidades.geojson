@@ -15,8 +15,8 @@
         "idSubprefeitura": 14,
         "implantado": true,
         "isPoint": true,
-        "url": "#",
-        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_S%C3%A3o_Franscisco.jpg",
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/largo-sao-francisco/",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_São_Franscisco.jpg",
         "nome": "Largo São Francisco"
       },
       "geometry": {
@@ -31,8 +31,8 @@
         "idSubprefeitura": 14,
         "implantado": true,
         "isPoint": true,
-        "url": "#",
-        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_S%C3%A3o_Bento.jpg",
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/largo-sao-bento/",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_São_Bento.jpg",
         "nome": "Largo São Bento"
       },
       "geometry": {
@@ -47,8 +47,8 @@
         "idSubprefeitura": 14,
         "implantado": true,
         "isPoint": true,
-        "url": "#",
-        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_General_Os%C3%B3rio.jpg",
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/largo-general-osorio/",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_General_Osório-1.jpg",
         "nome": "Largo General Osório"
       },
       "geometry": {
@@ -63,7 +63,7 @@
         "idSubprefeitura": 14,
         "implantado": true,
         "isPoint": true,
-        "url": "#",
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/largo-paissandu/",
         "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Largo_Paissandu.jpg",
         "nome": "Largo do Paissandú"
       },
@@ -79,8 +79,8 @@
         "idSubprefeitura": 14,
         "implantado": true,
         "isPoint": true,
-        "url": "#",
-        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Rua_Galv%C3%A3o_Bueno.jpg",
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/rua-galvao-bueno/",
+        "capa": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2020/12/Implantados_960x406_Rua_Galvão_Bueno.jpg",
         "nome": "Rua Galvão Bueno"
       },
       "geometry": {
