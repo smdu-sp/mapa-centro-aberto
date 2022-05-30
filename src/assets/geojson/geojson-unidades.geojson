@@ -18,7 +18,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/marechal-deodoro/",
         "capa": "",
-        "nome": "Praça Marechal Deodoro"
+        "nome": "Praça Marechal Deodoro",
+        "endereco": "Praça Marechal Deodoro (Praça Marechal Deodoro x Avenida Angélica)"
       },
       "geometry": {
         "type": "Point",
@@ -35,7 +36,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/praca-ministro-costa-manso/",
         "capa": "",
-        "nome": "Praça Ministro Costa Manso"
+        "nome": "Praça Ministro Costa Manso",
+        "endereco": "Praça Ministro Costa Manso (Rua Helena Zerrener x Rua Oscar Cintra Gordinho)"
       },
       "geometry": {
         "type": "Point",
@@ -52,7 +54,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/terminal-amaral-gurgel/",
         "capa": "",
-        "nome": "Amaral Gurgel"
+        "nome": "Amaral Gurgel",
+        "endereco": "Terminal Amaral Gurgel (Rua Ana Cintra)"
       },
       "geometry": {
         "type": "Point",
@@ -69,7 +72,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/largo-do-clipper/",
         "capa": "",
-        "nome": "Largo Cine Clipper"
+        "nome": "Largo Cine Clipper",
+        "endereco": "Largo do Clipper (Avenida Santa Marina x Rua Antonieta Leitão)"
       },
       "geometry": {
         "type": "Point",
@@ -86,7 +90,8 @@
         "isPoint": true,     
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/praca-padre-bento/",
         "capa": "",
-        "nome": "Praça Padre Bento"
+        "nome": "Praça Padre Bento",
+        "endereco": "Praça Padre Bento (Praça Padre Bento x Rua Rodrigues dos Santos)"
       },
       "geometry": {
         "type": "Point",
@@ -103,7 +108,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/rua-gregorio-ramalho/",
         "capa": "",
-        "nome": "Gregório Ramalho"
+        "nome": "Gregório Ramalho",
+        "endereco": "Praça Itaquera (Rua Gregório Ramalho x Rua Itagimirim x Avenida José Pinheiro Borges – Radial Leste)"
       },
       "geometry": {
         "type": "Point",
@@ -120,7 +126,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/praca-maria-bechara/",
         "capa": "",
-        "nome": "Praça Maria Bechara"
+        "nome": "Praça Maria Bechara",
+        "endereco": "Praça Maria Bechara (Rua Barão de Duprat x Rua Desembargador Bandeira de Mello)"
       },
       "geometry": {
         "type": "Point",
@@ -137,7 +144,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/praca-prof-jose-azevedo-antunes/",
         "capa": "",
-        "nome": "Praça Prof. José Azevedo Antunes"
+        "nome": "Praça Prof. José Azevedo Antunes",
+        "endereco": "Praça Professor José Azevedo Antunes (Rua Barão de Jundiaí x Rua Nossa Senhora da Lapa)"
       },
       "geometry": {
         "type": "Point",
@@ -154,7 +162,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/praca-manoel-lopes/",
         "capa": "",
-        "nome": "Praça Manoel Lopes"
+        "nome": "Praça Manoel Lopes",
+        "endereco": "Praça Manoel Lopes (Praça Manoel Lopes x Estrada do M’Boi Mirim)"
       },
       "geometry": {
         "type": "Point",
@@ -171,7 +180,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/praca-oito-de-setembro/",
         "capa": "",
-        "nome": "Praça Oito de Setembro"
+        "nome": "Praça Oito de Setembro",
+        "endereco": "Praça Oito de Setembro (Praça Oito de Setembro x Avenida Penha da França)"
       },
       "geometry": {
         "type": "Point",
@@ -188,7 +198,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/praca-nossa-senhora-dos-prazeres/",
         "capa": "",
-        "nome": "Praça Nossa Senhora dos Prazeres"
+        "nome": "Praça Nossa Senhora dos Prazeres",
+        "endereco": "Praça Nossa Senhora dos Prazeres (Avenida Luiz Dumont Villares)"
       },
       "geometry": {
         "type": "Point",
@@ -205,7 +216,8 @@
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/praca-benedito-ramos-rodrigues/",
         "capa": "",
-        "nome": "Praça Benedito Ramos Rodrigues"
+        "nome": "Praça Benedito Ramos Rodrigues",
+        "endereco": "Praça Benedito Ramos Rodrigues (Avenida Milene Elias x Avenida Boturussu)"
       },
       "geometry": {
         "type": "Point",

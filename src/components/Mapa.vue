@@ -96,6 +96,12 @@
 										<span>{{ selectedFeatures[0].properties.nome }}</span>
 									</li>
 									<li>
+										<span>{{ selectedFeatures[0].properties.endereco }}</span>
+									</li>
+									<li>
+										<span>Subprefeitura: {{ selectedFeatures[0].properties.subprefeitura }}</span>
+									</li>
+									<li>
 										<svg
 											width="15"
 											height="15"
@@ -112,7 +118,7 @@
 											/>
 										</svg>
 
-										<span>{{ selectedFeatures[0].properties.implantado ? 'Implantado' : 'Em andamento' }}</span>
+										<span>Implantação: {{ selectedFeatures[0].properties.dataImplantacao }}</span>
 									</li>
 									<li>
 										<svg
@@ -128,7 +134,7 @@
 												d="M533.333 533.333H66.6667V66.6667H300V0H66.6667C29.6667 0 0 30 0 66.6667V533.333C0 570 29.6667 600 66.6667 600H533.333C570 600 600 570 600 533.333V300H533.333V533.333ZM366.667 0V66.6667H486.333L158.667 394.333L205.667 441.333L533.333 113.667V233.333H600V0H366.667Z"
 											/>
 										</svg>
-										<a :href="selectedFeatures[0].properties.url">Saiba mais</a>
+										<a :href="selectedFeatures[0].properties.url" target="_blank">Ir para a página do Centro Aberto {{ selectedFeatures[0].properties.nome }}</a>
 									</li>
 								</ul>
 							</div>
@@ -223,6 +229,11 @@ export default {
 		this.features = this.features.features
 		this.points = JSON.parse(unidades)
 		this.src.pin = pin
+		// Adiciona a subprefeitura como propriedade de cada point
+		let listaSubprefeituras = []
+		this.features.forEach(obj => listaSubprefeituras[obj.properties.id - 1] = obj.properties.nome)
+		console.log(listaSubprefeituras)
+		this.points.features.forEach(obj => obj.properties.subprefeitura = listaSubprefeituras[obj.properties.idSubprefeitura - 1])
 	},
 	computed: {
 		implantados () {
