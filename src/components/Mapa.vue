@@ -48,7 +48,7 @@
 					<vl-geom-point :coordinates="point.geometry.coordinates" />
 					<vl-style-box>
 						<vl-style-icon
-							:src="point.properties.implantado ? src.pinImplantado : src.pinAndamento" 
+							:src="src.pin" 
 							:scale=".4"
 							:anchor="[0.5, 1]"
 						/>
@@ -197,8 +197,7 @@
 <script>
 import subprefeituras from '../assets/geojson/geojson-subprefeituras.geojson'
 import unidades from '../assets/geojson/geojson-unidades.geojson'
-import pinAndamento from '../assets/icons/pin-em-andamento.svg'
-import pinImplantado from '../assets/icons/pin-implantado.svg'
+import pin from '../assets/icons/pin.svg'
 
 export default {
 	name:'mapa',
@@ -213,8 +212,7 @@ export default {
 			extent: [30,30,30,30],
       mapCursor: 'default',
 			src: {
-				pinAndamento: '',
-				pinImplantado: '',
+				pin: '',
 				capaSelected: ''
 			},
 			showChatList: false
@@ -224,8 +222,7 @@ export default {
 		this.features = JSON.parse(subprefeituras)
 		this.features = this.features.features
 		this.points = JSON.parse(unidades)
-		this.src.pinAndamento = pinAndamento
-		this.src.pinImplantado = pinImplantado
+		this.src.pin = pin
 	},
 	computed: {
 		implantados () {
