@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Centro Aberto</title>
@@ -7,28 +8,27 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/css/ol.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://unpkg.com/vuelayers/lib/style.css">
-	
+	<link rel="stylesheet" href="https://unpkg.com/vuelayers@0.11.37/lib/style.css">
+
 	<!-- include Vue.js -->
-	<script src="https://unpkg.com/vue/dist/vue.js" defer></script>
+	<script src="https://unpkg.com/vue@2.6.14/dist/vue.js" defer></script>
 
 	<!-- include OpenLayers -->
 	<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js" defer></script>
 
 	<!-- include UMD Vuelayers Build-->
-	<script src="https://unpkg.com/vuelayers/lib/index.umd.js" defer></script>
-	
+	<script src="https://unpkg.com/vuelayers@0.11.37/lib/index.umd.js" defer></script>
+
 	<!-- include Swiper.js 
 		<script src="https://unpkg.com/swiper/swiper-bundle.js" defer></script>	
 		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 	-->
 
 </head>
+
 <body>
 	<div id="app" class="app">
-		<preloader
-			v-if="loaded"
-		></preloader>
+		<preloader v-if="loaded"></preloader>
 		<mapa></mapa>
 		<!--section-main
 			v-if="!showCentro && !loaded"
@@ -42,4 +42,5 @@
 		></centro-aberto -->
 	</div>
 </body>
+
 </html>
