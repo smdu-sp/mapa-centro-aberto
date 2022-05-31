@@ -9,3 +9,4 @@ dist/
 *.sln
 # Local Netlify folder
 .netlify
+src/assets/capas/

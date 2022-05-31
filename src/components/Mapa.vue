@@ -7,18 +7,18 @@
 			:load-tiles-while-interacting="true"
 			:style="{ cursor: mapCursor }"
 			data-projection="EPSG:4326"
-			style="height: 600px; background-color: #6f8094;"
+			style="height: 900px; background-color: #6f8094;"
 			@pointermove="onMapPointerMove"
 		>
-      <vl-view
-        :zoom.sync="zoom"
+			<vl-view
+				:zoom.sync="zoom"
 				:min-zoom="minZoom"
 				:center.sync="center"
 				ref="view"
-        ident="view"
+				ident="view"
 			/>
 			
-      <vl-layer-vector>
+      		<vl-layer-vector>
 				<vl-feature
 					:key="`key-layer-${feature.properties.id}`"
 					:ref="`layer-${feature.properties.id}`"
@@ -37,7 +37,7 @@
 						<vl-style-fill color="#EAF5FA" />
 					</vl-style-box>
 				</vl-feature>
-      </vl-layer-vector>
+      		</vl-layer-vector>
 
 			<vl-layer-vector>
 				<vl-feature
@@ -66,75 +66,44 @@
 						<section class="mapa__card">
 							<header
 								class="mapa__card-header"
-								:style="`background-image: url('${selectedFeatures[0].properties.capa}')`"
+								:style="!selectedFeatures[0].properties.capa ? `background-image: url('/src/assets/capas/${selectedFeatures[0].properties.nome} 135p.png')` : `background-image: url('${selectedFeatures[0].properties.capa}')`"
 							>
 								<button
 									:style="{
 										'background-color': selectedFeatures[0].properties.implantado ? '#5a67d7' : '#62b2ed'
 									}"
 									@click.prevent="selectedFeatures = []"
-								>Fechar</button>
+								>X</button>
 							</header>
 							<div class="mapa__card-content">
 								<ul>
-									<li class="lista-nome">
-										<svg
-											width="15"
-											height="15"
-											viewBox="0 0 14 20"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												fill-rule="evenodd"
-												clip-rule="evenodd"
-												fill="black"
-												fill-opacity="0.54"
-												d="M0 7.26501C0 3.39502 3.13 0.265015 7 0.265015C10.87 0.265015 14 3.39502 14 7.26501C14 11.435 9.58002 17.185 7.77002 19.375C7.37 19.855 6.64001 19.855 6.23999 19.375C4.41998 17.185 0 11.435 0 7.26501ZM4.5 7.26501C4.5 8.64502 5.62 9.76501 7 9.76501C8.38 9.76501 9.5 8.64502 9.5 7.26501C9.5 5.88501 8.38 4.76501 7 4.76501C5.62 4.76501 4.5 5.88501 4.5 7.26501Z"
-											/>
-										</svg>
-										<span>{{ selectedFeatures[0].properties.nome }}</span>
+									<li>
+										<div>
+											<img src="/src/assets/icons/caixinha-pin.png" alt="Informações do local" />
+										</div>
+										<div>
+											<h3>{{ selectedFeatures[0].properties.nome }}</h3>
+											<p>{{ selectedFeatures[0].properties.endereco }}</p>
+											<p>Subprefeitura: {{ selectedFeatures[0].properties.subprefeitura }}</p>
+										</div>
 									</li>
 									<li>
-										<span>{{ selectedFeatures[0].properties.endereco }}</span>
+										<div>
+											<img src="/src/assets/icons/caixinha-status.png" alt="Situação" />
+										</div>
+										<div>
+											<p>Implantação: {{ selectedFeatures[0].properties.dataImplantacao }}</p>
+										</div>
 									</li>
 									<li>
-										<span>Subprefeitura: {{ selectedFeatures[0].properties.subprefeitura }}</span>
-									</li>
-									<li>
-										<svg
-											width="15"
-											height="15"
-											viewBox="0 0 16 16"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												fill-rule="evenodd"
-												clip-rule="evenodd"
-												fill="black"
-												fill-opacity="0.54"
-												d="M14 0C14.83 0 15.5 0.669998 15.5 1.5V14.5C15.5 15.33 14.83 16 14 16C13.17 16 12.5 15.33 12.5 14.5V1.5C12.5 0.669998 13.17 0 14 0ZM2 10C2.82999 10 3.5 10.67 3.5 11.5V14.5C3.5 15.33 2.82999 16 2 16C1.17001 16 0.5 15.33 0.5 14.5V11.5C0.5 10.67 1.17001 10 2 10ZM9.5 6.5C9.5 5.67 8.82999 5 8 5C7.17001 5 6.5 5.67 6.5 6.5V14.5C6.5 15.33 7.17001 16 8 16C8.82999 16 9.5 15.33 9.5 14.5V6.5Z"
-											/>
-										</svg>
-
-										<span>Implantação: {{ selectedFeatures[0].properties.dataImplantacao }}</span>
-									</li>
-									<li>
-										<svg
-											width="15"
-											height="15"
-											viewBox="0 0 600 600"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												fill="black"
-												fill-opacity="0.54"
-												d="M533.333 533.333H66.6667V66.6667H300V0H66.6667C29.6667 0 0 30 0 66.6667V533.333C0 570 29.6667 600 66.6667 600H533.333C570 600 600 570 600 533.333V300H533.333V533.333ZM366.667 0V66.6667H486.333L158.667 394.333L205.667 441.333L533.333 113.667V233.333H600V0H366.667Z"
-											/>
-										</svg>
-										<a :href="selectedFeatures[0].properties.url" target="_blank">Ir para a página do Centro Aberto {{ selectedFeatures[0].properties.nome }}</a>
+										<div>
+											<img src="/src/assets/icons/caixinha-link.png" alt="Link" />
+										</div>
+										<div>
+											<a :href="selectedFeatures[0].properties.url" target="_blank">
+												Ir para a página do Centro Aberto {{ selectedFeatures[0].properties.nome }}
+											</a>
+										</div>
 									</li>
 								</ul>
 							</div>
