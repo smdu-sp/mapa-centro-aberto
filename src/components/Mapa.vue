@@ -37,6 +37,7 @@
 						<vl-style-fill color="#EAF5FA" />
 					</vl-style-box>
 				</vl-feature>
+				<vl-interaction-select @select="selectedFeatures = []"></vl-interaction-select>
       		</vl-layer-vector>
 
 			<vl-layer-vector>
@@ -55,7 +56,6 @@
 					</vl-style-box>
 				</vl-feature>
 
-				<vl-interaction-select :features.sync="selectedFeatures"></vl-interaction-select>
 				<vl-overlay
 					v-if="selectedFeatures.length > 0"
 					:position="selectedFeatures[0].geometry.coordinates"
@@ -221,11 +221,13 @@ export default {
 		onMapPointerMove ({ pixel }) {
 			let hitFeature = this.$refs.map.forEachFeatureAtPixel(pixel, feature => feature)
 			try {
-				if (hitFeature.get('isPoint')) {
-					this.mapCursor = 'pointer'
-					this.setSelected(hitFeature.get('id'))
-				} else {
-					this.mapCursor = 'default'
+				if (hitFeature) {
+					if (hitFeature.get('isPoint')) {
+						this.mapCursor = 'pointer'
+						this.setSelected(hitFeature.get('id'))
+					} else {
+						this.mapCursor = 'default'
+					}
 				}
 			} catch (err) {
 				console.log(err.message)
