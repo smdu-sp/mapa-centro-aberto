@@ -21,5 +21,5 @@ Template Name: centro-aberto
 <?php get_footer(); ?>
 <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js"></script>
-<script src="https://unpkg.com/vuelayers/lib/index.umd.js"></script>
+<script src="https://unpkg.com/vuelayers@0.11.37/lib/index.umd.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/SPA/centro-aberto/main.min.js"></script>

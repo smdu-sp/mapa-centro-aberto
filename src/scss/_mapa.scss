@@ -7,20 +7,19 @@
     font-family: Roboto, Arial, sans-serif;
     &-header {
       background-size: 100% 100%;
-      border-top-right-radius: 7px;
-      border-top-left-radius: 7px;
       margin: 0px;
       height: 135px;
       width: 100%;
 
       button {        
         border: none;
-        margin-left: 1px;
+        margin-right: 1px;
         border-radius: 23px;
         padding: 2px 9px;
         color: #fff;
         margin: 4px;
         opacity: .9;
+        float: right;
 
         &:hover {
           cursor: pointer;
@@ -42,18 +41,25 @@
           h3 {
             margin: 0;
             color: #000;
+            font-family: Roboto, Arial, sans-serif;
             font-weight: 900;
+            font-size: 20px;
           }
           div:nth-child(even){
             display: flex;
             flex-direction: column;
             justify-content: center;
             p, a {
+              font-family: Roboto, Arial, sans-serif;
               font-size: 14px;
+              line-height: initial;
             }
             p {
               margin-top: 0.5em;
               margin-bottom: 0.5em;
+            }
+            a {
+              color: #434190;
             }
           }
         }
@@ -74,21 +80,33 @@
     .card {
       display: flex;
       flex-direction: column;
+      font-family: Roboto, Arial, sans-serif;
+
+      & a {
+        text-decoration: none;
+      }
     }
 
     .card-header{
       background: #d0d8e4;
-      border-top-left-radius: 10px;  
-      border-top-right-radius: 10px;
       border-top: #aeb5c0 1px solid;
       border-left: #aeb5c0 1px solid;
       border-right: #aeb5c0 1px solid;
       padding: 1px;
       cursor: pointer;
+      font-family: Roboto, Arial, sans-serif;
       font-size: 13px;
   
       &-title {
         margin-left: 5px;
+        font-family: Roboto, Arial, sans-serif;
+      }
+
+      & span {
+        color: #4d5565;
+        font-size: 14pt;
+        margin-left: 15px;
+        vertical-align: super;
       }
     }
   

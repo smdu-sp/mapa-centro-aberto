@@ -7,7 +7,7 @@
 			:load-tiles-while-interacting="true"
 			:style="{ cursor: mapCursor }"
 			data-projection="EPSG:4326"
-			style="height: 900px; background-color: #6f8094;"
+			style="height: 800px; background-color: #6f8094;"
 			@pointermove="onMapPointerMove"
 		>
 			<vl-view
@@ -66,12 +66,13 @@
 						<section class="mapa__card">
 							<header
 								class="mapa__card-header"
-								:style="!selectedFeatures[0].properties.capa ? `background-image: url('/src/assets/capas/${selectedFeatures[0].properties.nome} 135p.png')` : `background-image: url('${selectedFeatures[0].properties.capa}')`"
+								:style="!selectedFeatures[0].properties.capa ? `background-image: url('${url + selectedFeatures[0].properties.nome} 135p.png')` : `background-image: url('${selectedFeatures[0].properties.capa}')`"
 							>
 								<button
 									:style="{
-										'background-color': selectedFeatures[0].properties.implantado ? '#5a67d7' : '#62b2ed'
+										'background-color': '#434190'
 									}"
+									aria-label="Fechar"
 									@click.prevent="selectedFeatures = []"
 								>X</button>
 							</header>
@@ -79,7 +80,7 @@
 								<ul>
 									<li>
 										<div>
-											<img src="/src/assets/icons/caixinha-pin.png" alt="Informações do local" />
+											<img :src="src.boxPin" alt="Informações do local" />
 										</div>
 										<div>
 											<h3>{{ selectedFeatures[0].properties.nome }}</h3>
@@ -89,7 +90,7 @@
 									</li>
 									<li>
 										<div>
-											<img src="/src/assets/icons/caixinha-status.png" alt="Situação" />
+											<img :src="src.boxStatus" alt="Situação" />
 										</div>
 										<div>
 											<p>Implantação: {{ selectedFeatures[0].properties.dataImplantacao }}</p>
@@ -97,7 +98,7 @@
 									</li>
 									<li>
 										<div>
-											<img src="/src/assets/icons/caixinha-link.png" alt="Link" />
+											<img :src="src.boxLink" alt="Link" />
 										</div>
 										<div>
 											<a :href="selectedFeatures[0].properties.url" target="_blank">
@@ -142,6 +143,9 @@
 									fill="#4d5565"
 								/>
 							</svg>
+							<span>
+								Lista de Centros
+							</span>
 						</p>
 					</div>
 				</a>
@@ -173,6 +177,9 @@
 import subprefeituras from '../assets/geojson/geojson-subprefeituras.geojson'
 import unidades from '../assets/geojson/geojson-unidades.geojson'
 import pin from '../assets/icons/pin.svg'
+import boxPin from '../assets/icons/caixinha-pin.png'
+import boxStatus from '../assets/icons/caixinha-status.png'
+import boxLink from '../assets/icons/caixinha-link.png'
 
 export default {
 	name:'mapa',
@@ -198,6 +205,10 @@ export default {
 		this.features = this.features.features
 		this.points = JSON.parse(unidades)
 		this.src.pin = pin
+		this.src.boxPin = boxPin
+		this.src.boxStatus = boxStatus
+		this.src.boxLink = boxLink
+		this.url = '/wp-content/themes/gestaourbana-1.4/SPA/centro-aberto/capas/'
 		// Adiciona a subprefeitura como propriedade de cada point
 		let listaSubprefeituras = []
 		this.features.forEach(obj => listaSubprefeituras[obj.properties.id - 1] = obj.properties.nome)
