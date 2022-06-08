@@ -10,9 +10,12 @@ module.exports = ({ mode, publicPath }) => {
 		mode,
 		entry: './src/main.js',
 		output: {
-			filename: 'main.min.js',
+			filename: '[name].[contenthash].js',
 			path: path.resolve(__dirname, 'dist'),
 			publicPath
+		},
+		optimization: {
+			moduleIds: 'hashed',
 		},
 		plugins: [
 			new VueLoaderPlugin(),
