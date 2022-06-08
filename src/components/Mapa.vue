@@ -7,7 +7,7 @@
 			:load-tiles-while-interacting="true"
 			:style="{ cursor: mapCursor }"
 			data-projection="EPSG:4326"
-			style="height: 800px; background-color: #6f8094;"
+			style="background-color: #6f8094;"
 			@pointermove="onMapPointerMove"
 		>
 			<vl-view
@@ -37,7 +37,6 @@
 						<vl-style-fill color="#EAF5FA" />
 					</vl-style-box>
 				</vl-feature>
-				<vl-interaction-select @select="selectedFeatures = []"></vl-interaction-select>
       		</vl-layer-vector>
 
 			<vl-layer-vector>
@@ -112,71 +111,17 @@
 					</template>
 				</vl-overlay>
 			</vl-layer-vector>
+
+			<vl-interaction-select  :features.sync="selectedFeatures" :filter="checaSelecao"></vl-interaction-select>
+
 		</vl-map>
-		<div class="list">
-			<div class="card">
-				<a @click="expandChatList">
-					<div class="card-header">
-						<p class="card-header-title">
-							<svg
-								v-if="!showChatList"
-								width="23"
-								height="23"
-								viewBox="0 0 400 248"
-								fill="none" xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M47 247.666L200 94.9998L353 247.666L400 200.666L200 0.666504L0 200.666L47 247.666Z"
-									fill="#4d5565"
-								/>
-							</svg>
-							<svg
-								v-else
-								width="23"
-								height="23"
-								viewBox="0 0 400 248"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M47 0.334229L200 153.001L353 0.334229L400 47.3342L200 247.334L0 47.3342L47 0.334229Z"
-									fill="#4d5565"
-								/>
-							</svg>
-							<span>
-								Lista de Centros
-							</span>
-						</p>
-					</div>
-				</a>
-				<div 
-					id="listbox" 
-					class="card-content"
-					:style="showChatList ? 'display: block;': 'display: none;' "
-				>
 
-					<div class="endpoint andamento">Em andamento</div>
-					<ul>
-						<li :key="item.properties.id" v-for="item in emAndamentos">
-							<span @click="setSelected(item.properties.id)">{{ item.properties.nome }}</span>
-						</li>
-					</ul>
-
-					<div class="endpoint implantados">Implantados</div>
-					<ul>
-						<li :key="item.properties.id" v-for="item in implantados">
-							<span @click="setSelected(item.properties.id)">{{ item.properties.nome }}</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
 	</div>
 </template>
 <script>
 import subprefeituras from '../assets/geojson/geojson-subprefeituras.geojson'
 import unidades from '../assets/geojson/geojson-unidades.geojson'
-import pin from '../assets/icons/pin.svg'
+import pin from '../assets/icons/mapa-pin.png'
 import boxPin from '../assets/icons/caixinha-pin.png'
 import boxStatus from '../assets/icons/caixinha-status.png'
 import boxLink from '../assets/icons/caixinha-link.png'
@@ -187,7 +132,7 @@ export default {
     return {
       zoom: 11.5,
 			minZoom: 11.5,
-			center: [-46.5614286546911, -23.58172651568904],
+			center: [-46.60, -23.60],
 			features: [],
 			selectedFeatures: [],
 			points: [],
@@ -231,27 +176,29 @@ export default {
 	methods: {
 		onMapPointerMove ({ pixel }) {
 			let hitFeature = this.$refs.map.forEachFeatureAtPixel(pixel, feature => feature)
-			try {
-				if (hitFeature) {
-					if (hitFeature.get('isPoint')) {
-						this.mapCursor = 'pointer'
-						this.setSelected(hitFeature.get('id'))
-					} else {
-						this.mapCursor = 'default'
-					}
+			if (hitFeature) {
+				if (hitFeature.get('isPoint')) {
+					this.mapCursor = 'pointer'
+					this.setSelected(hitFeature.get('id'))
+				} else {
+					this.mapCursor = 'default'
 				}
-			} catch (err) {
-				console.log(err.message)
 			}
 		},
 		expandChatList () {
-      this.showChatList = !this.showChatList;      
+      		this.showChatList = !this.showChatList;      
 		},
 		setIdCentro () {
 			this.$emit('idcentro', this.selectedFeatures[0].properties.id)
 		},
 		setSelected (id) {
 			this.selectedFeatures = this.points.features.filter(f => f.properties.id === id)
+		},
+		checaSelecao(feature) {
+			if (this.selectedFeatures.length > 0) {
+				this.selectedFeatures = []
+			}
+			return feature.get('isPoint');
 		}
 	}
 }

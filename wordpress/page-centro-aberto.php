@@ -3,7 +3,7 @@
 Template Name: centro-aberto
 */
 ?>
-<?php get_header(); ?>
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/css/ol.css">
 <link rel="stylesheet" href="https://unpkg.com/vuelayers@0.11.37/lib/style.css">
@@ -18,7 +18,6 @@ Template Name: centro-aberto
 	</div>
 </div>
 
-<?php get_footer(); ?>
 <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v5.3.0/build/ol.js"></script>
 <script src="https://unpkg.com/vuelayers@0.11.37/lib/index.umd.js"></script>
