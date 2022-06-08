@@ -14,6 +14,97 @@
         "id": 1,
         "idSubprefeitura": 14,
         "implantado": true,
+        "dataImplantacao": "Dezembro de 2014",
+        "isPoint": true,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/largo-sao-francisco/",
+        "capa": "",
+        "nome": "Largo São Francisco",
+        "endereco": "Largo São Francisco e Praça Ouvidor Pacheco e Silva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.636723, -23.549611]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "idSubprefeitura": 14,
+        "implantado": true,
+        "dataImplantacao": "Dezembro de 2016",
+        "isPoint": true,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/largo-sao-bento/",
+        "capa": "",
+        "nome": "Largo São Bento",
+        "endereco": "Rua Boa Vista (em frente à estação São Bento do metrô)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6362269, -23.5439553]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "idSubprefeitura": 14,
+        "implantado": true,
+        "dataImplantacao": "Dezembro de 2016",
+        "isPoint": true,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/largo-general-osorio/",
+        "capa": "",
+        "nome": "Largo General Osório",
+        "endereco": "Praça General Osório"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6406633, -23.5352562]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "idSubprefeitura": 14,
+        "implantado": true,
+        "dataImplantacao": "Dezembro de 2014",
+        "isPoint": true,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/largo-paissandu/",
+        "capa": "",
+        "nome": "Av. São João e Largo do Paissandu",
+        "endereco": "Largo do Paissandu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6405847, -23.5427217]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "idSubprefeitura": 14,
+        "implantado": true,
+        "dataImplantacao": "Dezembro de 2016",
+        "isPoint": true,
+        "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/rua-galvao-bueno/",
+        "capa": "",
+        "nome": "Rua Galvão Bueno",
+        "endereco": "Rua Galvão Bueno (Liberdade)"
+
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.6371392, -23.5596132]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "idSubprefeitura": 14,
+        "implantado": true,
         "dataImplantacao": "Outubro de 2020",
         "isPoint": true,
         "url": "https://gestaourbana.prefeitura.sp.gov.br/projetos-urbanos/centro-aberto/marechal-deodoro/",
@@ -29,7 +120,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 2,
+        "id": 7,
         "idSubprefeitura": 14,
         "implantado": true,
         "dataImplantacao": "Setembro de 2020",
@@ -47,7 +138,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 3,
+        "id": 8,
         "idSubprefeitura": 14,
         "implantado": true,
         "dataImplantacao": "Dezembro de 2020",
@@ -65,7 +156,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 4,
+        "id": 9,
         "idSubprefeitura": 2,
         "implantado": true,
         "dataImplantacao": "Setembro de 2020",
@@ -83,7 +174,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 5,
+        "id": 10,
         "idSubprefeitura": 15,
         "implantado": true,
         "dataImplantacao": "Setembro de 2020",
@@ -101,7 +192,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 6,
+        "id": 11,
         "idSubprefeitura": 11,
         "implantado": true,
         "dataImplantacao": "Outubro de 2020",
@@ -119,7 +210,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 7,
+        "id": 12,
         "idSubprefeitura": 29,
         "implantado": true,
         "dataImplantacao": "Novembro de 2020",
@@ -137,7 +228,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 8,
+        "id": 13,
         "idSubprefeitura": 13,
         "implantado": true,
         "dataImplantacao": "Novembro de 2020",
@@ -155,7 +246,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 9,
+        "id": 14,
         "idSubprefeitura": 24,
         "implantado": false,
         "dataImplantacao": "Em andamento",
@@ -173,7 +264,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 10,
+        "id": 15,
         "idSubprefeitura": 7,
         "implantado": true,
         "dataImplantacao": "Setembro de 2020",
@@ -191,7 +282,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 11,
+        "id": 16,
         "idSubprefeitura": 4,
         "implantado": true,
         "dataImplantacao": "Agosto de 2021",
@@ -209,7 +300,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": 12,
+        "id": 17,
         "idSubprefeitura": 8,
         "implantado": false,
         "dataImplantacao": "Em andamento",
