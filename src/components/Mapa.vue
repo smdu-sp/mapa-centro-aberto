@@ -157,7 +157,6 @@ export default {
 		// Adiciona a subprefeitura como propriedade de cada point
 		let listaSubprefeituras = []
 		this.features.forEach(obj => listaSubprefeituras[obj.properties.id - 1] = obj.properties.nome)
-		console.log(listaSubprefeituras)
 		this.points.features.forEach(obj => obj.properties.subprefeitura = listaSubprefeituras[obj.properties.idSubprefeitura - 1])
 	},
 	computed: {
