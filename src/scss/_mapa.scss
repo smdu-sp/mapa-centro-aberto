@@ -64,10 +64,13 @@
               color: #434190;
             }
           }
+          img {
+            max-width: unset !important;
+            width: 51px;
+          }
           @media (max-width: 640px) {
             img {
               width: 40px;
-              max-width: unset !important;
             }
           }
         }
