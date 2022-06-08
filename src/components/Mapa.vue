@@ -41,7 +41,7 @@
 
 			<vl-layer-vector>
 				<vl-feature
-					:key="`point-${point.properties.id}`"
+					:key="`point-${point.properties.idUnidade}`"
 					v-for="point in points.features"
 					:properties="point.properties"
 				>
@@ -58,8 +58,6 @@
 				<vl-overlay
 					v-if="selectedFeatures.length > 0"
 					:position="selectedFeatures[0].geometry.coordinates"
-					:auto-pan="true"
-					:auto-pan-animation="{ duration: 300 }"
 				>
 					<template>
 						<section class="mapa__card">
@@ -178,7 +176,7 @@ export default {
 			if (hitFeature) {
 				if (hitFeature.get('isPoint')) {
 					this.mapCursor = 'pointer'
-					this.setSelected(hitFeature.get('id'))
+					this.setSelected(hitFeature.get('idUnidade'))
 				} else {
 					this.mapCursor = 'default'
 				}
@@ -188,10 +186,10 @@ export default {
       		this.showChatList = !this.showChatList;      
 		},
 		setIdCentro () {
-			this.$emit('idcentro', this.selectedFeatures[0].properties.id)
+			this.$emit('idcentro', this.selectedFeatures[0].properties.idUnidade)
 		},
 		setSelected (id) {
-			this.selectedFeatures = this.points.features.filter(f => f.properties.id === id)
+			this.selectedFeatures = this.points.features.filter(f => f.properties.idUnidade === id)
 		},
 		checaSelecao(feature) {
 			if (this.selectedFeatures.length > 0) {

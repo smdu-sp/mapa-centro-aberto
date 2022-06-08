@@ -10,8 +10,9 @@
   "features": [
     {
       "type": "Feature",
+      "id": "point-1",
       "properties": {
-        "id": 1,
+        "idUnidade": 1,
         "idSubprefeitura": 14,
         "implantado": true,
         "dataImplantacao": "Dezembro de 2014",
@@ -28,8 +29,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-2",
       "properties": {
-        "id": 2,
+        "idUnidade": 2,
         "idSubprefeitura": 14,
         "implantado": true,
         "dataImplantacao": "Dezembro de 2016",
@@ -46,8 +48,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-3",
       "properties": {
-        "id": 3,
+        "idUnidade": 3,
         "idSubprefeitura": 14,
         "implantado": true,
         "dataImplantacao": "Dezembro de 2016",
@@ -64,8 +67,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-4",
       "properties": {
-        "id": 4,
+        "idUnidade": 4,
         "idSubprefeitura": 14,
         "implantado": true,
         "dataImplantacao": "Dezembro de 2014",
@@ -82,8 +86,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-5",
       "properties": {
-        "id": 5,
+        "idUnidade": 5,
         "idSubprefeitura": 14,
         "implantado": true,
         "dataImplantacao": "Dezembro de 2016",
@@ -101,8 +106,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-6",
       "properties": {
-        "id": 6,
+        "idUnidade": 6,
         "idSubprefeitura": 14,
         "implantado": true,
         "dataImplantacao": "Outubro de 2020",
@@ -119,8 +125,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-7",
       "properties": {
-        "id": 7,
+        "idUnidade": 7,
         "idSubprefeitura": 14,
         "implantado": true,
         "dataImplantacao": "Setembro de 2020",
@@ -137,8 +144,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-8",
       "properties": {
-        "id": 8,
+        "idUnidade": 8,
         "idSubprefeitura": 14,
         "implantado": true,
         "dataImplantacao": "Dezembro de 2020",
@@ -155,8 +163,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-9",
       "properties": {
-        "id": 9,
+        "idUnidade": 9,
         "idSubprefeitura": 2,
         "implantado": true,
         "dataImplantacao": "Setembro de 2020",
@@ -173,8 +182,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-10",
       "properties": {
-        "id": 10,
+        "idUnidade": 10,
         "idSubprefeitura": 15,
         "implantado": true,
         "dataImplantacao": "Setembro de 2020",
@@ -191,8 +201,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-11",
       "properties": {
-        "id": 11,
+        "idUnidade": 11,
         "idSubprefeitura": 11,
         "implantado": true,
         "dataImplantacao": "Outubro de 2020",
@@ -209,8 +220,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-12",
       "properties": {
-        "id": 12,
+        "idUnidade": 12,
         "idSubprefeitura": 29,
         "implantado": true,
         "dataImplantacao": "Novembro de 2020",
@@ -227,8 +239,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-13",
       "properties": {
-        "id": 13,
+        "idUnidade": 13,
         "idSubprefeitura": 13,
         "implantado": true,
         "dataImplantacao": "Novembro de 2020",
@@ -245,8 +258,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-14",
       "properties": {
-        "id": 14,
+        "idUnidade": 14,
         "idSubprefeitura": 24,
         "implantado": false,
         "dataImplantacao": "Em andamento",
@@ -263,8 +277,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-15",
       "properties": {
-        "id": 15,
+        "idUnidade": 15,
         "idSubprefeitura": 7,
         "implantado": true,
         "dataImplantacao": "Setembro de 2020",
@@ -281,8 +296,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-16",
       "properties": {
-        "id": 16,
+        "idUnidade": 16,
         "idSubprefeitura": 4,
         "implantado": true,
         "dataImplantacao": "Agosto de 2021",
@@ -299,8 +315,9 @@
     },
     {
       "type": "Feature",
+      "id": "point-17",
       "properties": {
-        "id": 17,
+        "idUnidade": 17,
         "idSubprefeitura": 8,
         "implantado": false,
         "dataImplantacao": "Em andamento",
