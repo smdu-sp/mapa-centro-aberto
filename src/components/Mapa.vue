@@ -175,11 +175,12 @@ export default {
 					this.mapCursor = 'pointer'
 					this.setSelected(hitFeature.get('idUnidade'))
 					this.coordenadasOverlay = this.posicionaOverlay()
-				} else {
-					this.mapCursor = 'default'
-					this.setSelected(0)
-				}
+					return
+				} 
 			}
+			// Caso o mouse não esteja sobre feature, ou se feature não seja point, reseta o cursor e a seleção
+			this.mapCursor = 'default'
+			this.setSelected(0)
 		},
 		posicionaOverlay(feature = false) {
 			let coordenadas = []
