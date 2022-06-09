@@ -41,7 +41,7 @@
 
 			<vl-layer-vector>
 				<vl-feature
-					:key="`point-${point.properties.idUnidade}`"
+					:key="point.id"
 					v-for="point in points.features"
 					:properties="point.properties"
 				>
@@ -57,10 +57,12 @@
 
 				<vl-overlay
 					v-if="selectedFeatures.length > 0"
-					:position="selectedFeatures[0].geometry.coordinates"
+					:position="coordenadasOverlay"
+					positioning="top-center"
+					:stop-event="true"
 				>
 					<template>
-						<section class="mapa__card">
+						<section class="mapa__card" @pointermove.stop="previneFechamento">
 							<header
 								class="mapa__card-header"
 								:style="!selectedFeatures[0].properties.capa ? `background-image: url('${url + selectedFeatures[0].properties.nome} 135p.png')` : `background-image: url('${selectedFeatures[0].properties.capa}')`"
@@ -165,37 +167,59 @@ export default {
 			return this.points.features.filter(p => p.properties.implantado !== true)
 		}
 	},
-	/* watch: {
-		selectedFeatures () {
-			this.showChatList = false
-		}
-	}, */
 	methods: {
-		onMapPointerMove ({ pixel }) {
+		onMapPointerMove({ pixel }) {
 			let hitFeature = this.$refs.map.forEachFeatureAtPixel(pixel, feature => feature)
 			if (hitFeature) {
 				if (hitFeature.get('isPoint')) {
 					this.mapCursor = 'pointer'
 					this.setSelected(hitFeature.get('idUnidade'))
+					this.coordenadasOverlay = this.posicionaOverlay()
 				} else {
 					this.mapCursor = 'default'
+					this.setSelected(0)
 				}
 			}
 		},
-		expandChatList () {
+		posicionaOverlay(feature = false) {
+			let coordenadas = []
+			if (!feature) {
+				coordenadas = [...this.selectedFeatures[0].geometry.coordinates]
+			} else {
+				// Converte as coordenadas 'Pseudo-Mercator' utilizadas pelo OpenLayers em
+				// coordenadas de Latitude e Longitude utilizadas pela aplicação
+				const coordenadasRaw = feature.getGeometry().getCoordinates()
+				const src = 'EPSG:3857'
+				const dest = 'EPSG:4326'
+				coordenadas = [...ol.proj.transform(coordenadasRaw, src, dest)]
+			}
+				coordenadas[1] += 0.005
+			return coordenadas
+		},
+		previneFechamento() {
+			return true
+		},
+		expandChatList() {
       		this.showChatList = !this.showChatList;      
 		},
-		setIdCentro () {
+		setIdCentro() {
 			this.$emit('idcentro', this.selectedFeatures[0].properties.idUnidade)
 		},
-		setSelected (id) {
-			this.selectedFeatures = this.points.features.filter(f => f.properties.idUnidade === id)
+		setSelected(id) {
+			if (id != 0) {
+				return this.selectedFeatures = this.points.features.filter(f => f.properties.idUnidade === id)
+			}
+			return this.selectedFeatures = [];
 		},
 		checaSelecao(feature) {
 			if (this.selectedFeatures.length > 0) {
 				this.selectedFeatures = []
 			}
-			return feature.get('isPoint');
+			if (feature.get('isPoint')) {
+				this.coordenadasOverlay = this.posicionaOverlay(feature);
+				return true
+			}
+			return false
 		}
 	}
 }
