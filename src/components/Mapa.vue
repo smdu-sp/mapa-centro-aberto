@@ -198,6 +198,7 @@ export default {
 			return coordenadas
 		},
 		previneFechamento() {
+			this.mapCursor = 'default'
 			return true
 		},
 		expandChatList() {
