@@ -130,9 +130,9 @@ export default {
 	name:'mapa',
 	data () {
     return {
-      zoom: 11.5,
-			minZoom: 11.5,
-			center: [-46.60, -23.60],
+      zoom: 10.7,
+			minZoom: 10.5,
+			center: [-46.62, -23.67],
 			features: [],
 			selectedFeatures: [],
 			points: [],
