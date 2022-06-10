@@ -58,6 +58,7 @@
 				<vl-overlay
 					v-if="selectedFeatures.length > 0"
 					:position="coordenadasOverlay"
+					:offset="[0,-10]"
 					positioning="top-center"
 					:stop-event="true"
 				>
@@ -194,7 +195,6 @@ export default {
 				const dest = 'EPSG:4326'
 				coordenadas = [...ol.proj.transform(coordenadasRaw, src, dest)]
 			}
-				coordenadas[1] += 0.005
 			return coordenadas
 		},
 		previneFechamento() {
